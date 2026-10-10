@@ -21,6 +21,7 @@ import { initAnimations } from './controllers/animations';
 import { initFullscreenScroll } from './controllers/horizontal-scroll';
 import { initNetworkCanvas } from './controllers/canvas-network';
 import { initMagneticAndRepulsionEffects } from './controllers/magnetic-cursor';
+import { initAmbientAudio } from './controllers/audio';
 import { ICONS } from './assets/icons';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLiveClock();
   initCopyActions();
   initMagneticAndRepulsionEffects();
+  initAmbientAudio();
 
   // 2. Khởi tạo i18n & Render nội dung theo ngôn ngữ (mặc định English)
   initI18n((lang: Language) => {

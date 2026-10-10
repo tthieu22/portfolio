@@ -24,7 +24,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       githubUsername: "tthieu22",
       statusBadge: "OPEN FOR OPPORTUNITIES",
       availability: "One month after receiving an official offer",
-      avatarUrl: "./assets/images/portrait.png",
+      avatarUrl: "./assets/images/avatar.jpg",
       avatarCaption: "HANOI, VN / BACKEND DEVELOPER",
       cvDownloadPath: "./assets/docs/Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf"
     },
@@ -379,7 +379,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       githubUsername: "tthieu22",
       statusBadge: "SẴN SÀNG ĐÓN NHẬN CƠ HỘI",
       availability: "Sẵn sàng nhận việc 1 tháng sau khi nhận được offer chính thức",
-      avatarUrl: "./assets/images/portrait.png",
+      avatarUrl: "./assets/images/avatar.jpg",
       avatarCaption: "HÀ NỘI, VN / BACKEND DEVELOPER",
       cvDownloadPath: "./assets/docs/Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf"
     },

@@ -220,6 +220,161 @@
   fill: none;
 }
 
+/* --- AMBIENT AUDIO CHILL CONTROLLER --- */
+.ambient-audio-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ambient-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.75rem;
+}
+
+.ambient-audio-btn.is-playing {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+  background-color: rgba(16, 185, 129, 0.08);
+}
+
+.audio-equalizer {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  width: 13px;
+  height: 13px;
+}
+
+.audio-equalizer .bar {
+  display: block;
+  width: 2.5px;
+  background-color: currentColor;
+  border-radius: 1px;
+  height: 3px;
+  transition: height 0.2s ease;
+}
+
+.ambient-audio-btn.is-playing .bar-1 {
+  animation: eq-bounce-1 0.9s infinite ease-in-out alternate;
+}
+.ambient-audio-btn.is-playing .bar-2 {
+  animation: eq-bounce-2 0.7s infinite ease-in-out alternate;
+}
+.ambient-audio-btn.is-playing .bar-3 {
+  animation: eq-bounce-3 1.1s infinite ease-in-out alternate;
+}
+
+@keyframes eq-bounce-1 {
+  0% { height: 3px; }
+  100% { height: 13px; }
+}
+@keyframes eq-bounce-2 {
+  0% { height: 12px; }
+  100% { height: 4px; }
+}
+@keyframes eq-bounce-3 {
+  0% { height: 4px; }
+  100% { height: 13px; }
+}
+
+.audio-label-text {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.audio-vol-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 1px 4px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+.ambient-audio-btn.is-playing .audio-vol-badge {
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--accent-green);
+}
+
+/* Volume Slider Popover / Flyout */
+.ambient-volume-flyout {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--bg-card);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  min-width: 150px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: all var(--transition-fast);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.ambient-audio-wrapper:hover .ambient-volume-flyout,
+.ambient-volume-flyout:hover,
+.ambient-audio-wrapper:focus-within .ambient-volume-flyout {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.flyout-title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.flyout-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text-secondary);
+}
+
+.flyout-slider-row input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.flyout-slider-row input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 6px var(--accent-green-glow);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.flyout-slider-row input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+}
+
 /* --- ACTION TAG BUTTON (Dự án Live Demo & Github links) --- */
 .btn-action-tag {
   display: inline-flex;

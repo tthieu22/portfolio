@@ -60,6 +60,26 @@
             <!-- Icon rendered via theme.js -->
             <span>THEME</span>
           </button>
+          <!-- Ambient Chill Audio Controller -->
+          <div class="ambient-audio-wrapper">
+            <button class="btn-pill ambient-audio-btn" id="ambient-audio-btn" aria-label="Toggle Ambient Chill Audio" title="Bật/Tắt nhạc chill">
+              <span class="audio-equalizer" aria-hidden="true">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
+              </span>
+              <span class="audio-label-text">CHILL</span>
+              <span class="audio-vol-badge" id="ambient-volume-text">18%</span>
+            </button>
+            <div class="ambient-volume-flyout">
+              <span class="flyout-title">CHILL BGM</span>
+              <div class="flyout-slider-row">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                <input type="range" id="ambient-volume-slider" min="1" max="100" value="18" step="1" aria-label="Volume Slider">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+            </div>
+          </div>
           <a href="https://github.com/tthieu22" target="_blank" rel="noopener"
             class="btn btn-sm btn-outline github-link-target">
             <span class="btn-icon" aria-hidden="true">
@@ -108,7 +128,7 @@
             <div class="polaroid-frame">
               <span class="polaroid-corner-mark">FIG. 01</span>
               <div class="polaroid-image-wrapper">
-                <img src="./assets/images/portrait.png" alt="Tran Trong Hieu - Backend Developer" class="polaroid-img"
+                <img src="./assets/images/avatar.jpg" alt="Tran Trong Hieu - Backend Developer" class="polaroid-img"
                   id="polaroid-img">
               </div>
               <div class="polaroid-caption">

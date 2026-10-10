@@ -131,6 +131,12 @@
   .lang-switch-btn {
     padding: 0.42rem 0.55rem;
   }
+  .ambient-audio-btn {
+    padding: 0.42rem 0.55rem;
+  }
+  .audio-label-text {
+    display: none;
+  }
   .top-nav .btn-sm {
     padding: 0.42rem 0.65rem;
     font-size: 0.72rem;
@@ -143,6 +149,9 @@
     gap: 0.4rem;
   }
   #nav-download-cv-text {
+    display: none;
+  }
+  .audio-vol-badge {
     display: none;
   }
   .top-nav .btn-sm {
