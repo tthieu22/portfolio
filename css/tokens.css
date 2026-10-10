@@ -1,0 +1,144 @@
+/**
+ * =========================================================================
+ * DESIGN TOKENS & SYSTEM VARIABLES (tokens.css)
+ * =========================================================================
+ * Single Source of Truth cho toàn bộ màu sắc, typography, spacing, border.
+ * =========================================================================
+ */
+
+:root {
+  /* --- TYPOGRAPHY --- */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* --- CLEAN SLATE TECH THEME (LIGHT / DEFAULT) --- */
+  --bg-primary: #FAFAFC;
+  --bg-secondary: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F8FAFC;
+  --bg-accent-subtle: #ECFDF5;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-inverse: #FFFFFF;
+
+  --border-color: #CBD5E1;
+  --border-subtle: #E2E8F0;
+  --border-strong: #94A3B8;
+  --border-focus: #0F172A;
+
+  --accent-green: #059669;
+  --accent-green-glow: rgba(5, 150, 105, 0.18);
+  --accent-blue: #2563EB;
+  --accent-orange: #EA580C;
+
+  --grid-line: rgba(15, 23, 42, 0.04);
+  --blueprint-grid-size: 32px;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 16px 36px -4px rgba(15, 23, 42, 0.08);
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- DARK BLUEPRINT THEME --- */
+[data-theme="dark"] {
+  --bg-primary: #0B0C0E;
+  --bg-secondary: #121417;
+  --bg-card: #16181D;
+  --bg-card-subtle: #1C1E24;
+  --bg-accent-subtle: rgba(16, 185, 129, 0.12);
+
+  --text-primary: #F4F5F7;
+  --text-secondary: #9FA1A9;
+  --text-muted: #6B6D76;
+  --text-inverse: #0B0C0E;
+
+  --border-color: #272A32;
+  --border-subtle: #1E2027;
+  --border-strong: #3F4450;
+  --border-focus: #F4F5F7;
+
+  --accent-green: #10B981;
+  --accent-green-glow: rgba(16, 185, 129, 0.35);
+  --accent-blue: #3B82F6;
+  --accent-orange: #F97316;
+
+  --grid-line: rgba(255, 255, 255, 0.04);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Global Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: clip;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Subtle modern tech ambient spotlight */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 640px;
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.05) 0%, rgba(37, 99, 235, 0.02) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="dark"] body::before {
+  background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.04) 45%, transparent 70%);
+}
+
+/* Technical Grid Overlay (Full Width Edge-to-Edge) */
+.technical-grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background-size: var(--blueprint-grid-size) var(--blueprint-grid-size);
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+

@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trần Trọng Hiếu — Backend Developer & Distributed Systems</title>
+  <meta name="description"
+    content="Portfolio của Trần Trọng Hiếu - Backend Developer chuyên sâu về hệ thống phân tán, xử lý dữ liệu lớn (10 TB), quy trình Camunda BPMN và tối ưu hóa hiệu năng cao.">
+  <meta name="keywords"
+    content="Tran Trong Hieu, Backend Developer, NestJS, Spring Boot, Camunda BPMN, 10 TB Data Migration, Worker Threads, High Concurrency">
+  <meta name="author" content="Trần Trọng Hiếu">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Trần Trọng Hiếu — Backend Developer & Distributed Systems">
+  <meta property="og:description"
+    content="Kỹ sư Backend chuyên sâu về hệ thống phân tán, xử lý dữ liệu lớn 10 TB và quy trình nghiệp vụ doanh nghiệp.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Space Grotesk, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Technical Blueprint Background Grid -->
+  <div class="technical-grid-bg" aria-hidden="true"></div>
+
+  <!-- Global Distributed Network Canvas (Active Across Entire Website) -->
+  <canvas id="global-network-canvas" class="global-network-canvas" aria-hidden="true"></canvas>
+
+  <!-- Interactive Global Tech Reticle & Follower -->
+  <div class="tech-cursor-dot" id="tech-cursor-dot" aria-hidden="true"></div>
+  <div class="tech-cursor-ring" id="tech-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav">
+    <div class="app-container">
+      <div class="nav-inner">
+        <a href="#hero" class="brand-logo" id="brand-home-link">
+          <span class="dot"></span>
+          <span>TTHIEU.DEV</span>
+        </a>
+
+        <div class="nav-center-meta">
+          <span id="live-clock-display">HANOI --:--:-- [GMT+7]</span>
+          <span id="hud-coords-display" style="color: var(--accent-green); letter-spacing: 0.05em;">X:0000 Y:0000</span>
+        </div>
+
+        <div class="nav-actions">
+          <button class="lang-switch-btn" id="lang-toggle-btn" aria-label="Toggle Language" title="Switch Language">
+            <!-- Icon & label rendered via i18n.ts -->
+            <span>EN / VI</span>
+          </button>
+          <button class="theme-switch-btn" id="theme-toggle-btn" aria-label="Toggle Theme">
+            <!-- Icon rendered via theme.js -->
+            <span>THEME</span>
+          </button>
+          <a href="https://github.com/tthieu22" target="_blank" rel="noopener"
+            class="btn btn-sm btn-outline github-link-target">
+            <span class="btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </span>
+            <span>GITHUB</span>
+          </a>
+          <a href="./assets/docs/Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf"
+            download="Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf" id="download-cv-btn" class="btn btn-sm btn-primary"
+            target="_blank" rel="noopener">
+            <span class="btn-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </span>
+            <span id="nav-download-cv-text">CV [PDF]</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Flow -->
+  <main class="main-content-flow">
+
+    <!-- 00 // HERO SECTION (Full Width Edge-to-Edge) -->
+    <section class="hero-section" id="hero">
+      <div class="app-container">
+
+        <div class="hero-meta-row">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span id="hero-meta-label">01 / BACKEND & DISTRIBUTED SYSTEMS</span>
+            <span id="hero-status-badge" class="status-pill">
+              <!-- Rendered by main.ts -->
+            </span>
+          </div>
+          <div class="hero-tags-pill">
+            <span class="tech-tag" id="hero-tag-1">NESTJS</span>
+            <span class="tech-tag" id="hero-tag-2">SPRING BOOT</span>
+            <span class="tech-tag" id="hero-tag-3">10 TB MIGRATION</span>
+            <span class="tech-tag" id="hero-tag-4">CAMUNDA BPMN</span>
+          </div>
+        </div>
+
+        <div class="hero-main-grid">
+          <!-- Left: Polaroid Media Column -->
+          <div class="hero-media-col">
+            <div class="polaroid-frame">
+              <span class="polaroid-corner-mark">FIG. 01</span>
+              <div class="polaroid-image-wrapper">
+                <img src="./assets/images/portrait.png" alt="Tran Trong Hieu - Backend Developer" class="polaroid-img"
+                  id="polaroid-img">
+              </div>
+              <div class="polaroid-caption">
+                <span id="polaroid-caption-text">HANOI, VN / SYSTEMS & BACKEND</span>
+                <span style="color: var(--accent-green);">● ACTIVE</span>
+              </div>
+            </div>
+
+            <div class="hero-mini-bio" id="hero-mini-bio">
+              <!-- Rendered by main.ts -->
+            </div>
+          </div>
+
+          <!-- Right: Giant Editorial Typography -->
+          <div class="hero-content-col">
+            <h1 class="hero-giant-title">
+              TRAN TRONG HIEU
+              <span class="outline-text">BACKEND DEV</span>
+            </h1>
+
+            <p class="hero-headline-desc" id="hero-headline-desc">
+              <!-- Rendered by main.ts -->
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#case-studies" class="btn btn-primary" id="hero-btn-cases">
+                <span class="btn-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </span>
+                <span id="hero-btn-cases-text">XEM KINH NGHIỆM THỰC CHIẾN</span>
+              </a>
+              <button class="btn btn-outline" id="copy-email-btn" title="Sao chép email vào clipboard">
+                <span class="btn-icon" id="copy-email-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                </span>
+                <span id="hero-btn-copy-text">SAO CHÉP EMAIL</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FULLSCREEN IMMERSIVE HORIZONTAL RUNWAY (100VH PINNED SCROLLER)
+         Command-deck presentation: Pinned viewport horizontally tracking across 4 chapters
+         ========================================================================= -->
+    <section class="fullscreen-runway-wrapper" id="fullscreen-runway-section"
+      aria-label="Fullscreen Architectural Journey">
+      <div class="runway-sticky-viewport">
+        <!-- Top bar of the Fullscreen Runway with Clickable Chapter Pills -->
+        <div class="runway-top-bar">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span class="status-dot-pulse"></span>
+            <span id="runway-top-title"
+              style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">
+              FULLSCREEN ARCHITECTURAL RUNWAY // PINNED 100VH
+            </span>
+          </div>
+
+          <!-- Interactive Clickable Chapter Navigation Pills -->
+          <div class="runway-nav-pills-group" role="tablist">
+            <button class="runway-nav-pill active" data-chapter="0" role="tab" aria-selected="true"
+              title="Jump to Chapter 1">
+              <span class="pill-dot"></span><span id="runway-pill-1">01 // 10 TB PIPELINE</span>
+            </button>
+            <button class="runway-nav-pill" data-chapter="1" role="tab" aria-selected="false" title="Jump to Chapter 2">
+              <span class="pill-dot"></span><span id="runway-pill-2">02 // 15x THREADS</span>
+            </button>
+            <button class="runway-nav-pill" data-chapter="2" role="tab" aria-selected="false" title="Jump to Chapter 3">
+              <span class="pill-dot"></span><span id="runway-pill-3">03 // CAMUNDA BPMN</span>
+            </button>
+            <button class="runway-nav-pill" data-chapter="3" role="tab" aria-selected="false" title="Jump to Chapter 4">
+              <span class="pill-dot"></span><span id="runway-pill-4">04 // LOCAL AI ENGINE</span>
+            </button>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1.25rem;">
+            <span
+              style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; color: var(--accent-green);"
+              id="runway-current-step">01 / 04</span>
+            <div class="runway-progress-track">
+              <div class="runway-progress-fill" id="runway-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horizontal Runway Track (Transforms across the viewport) -->
+        <div class="horizontal-runway-track" id="horizontal-runway-track">
+
+          <!-- PANEL 01: 10 TB DATA PIPELINE -->
+          <article class="runway-panel">
+            <div class="panel-header-row">
+              <div>
+                <span class="tech-tag" id="runway-ch1-tag"
+                  style="background-color: var(--bg-accent-subtle); color: var(--accent-green); border-color: var(--accent-green);">
+                  CHAPTER 01 // BIG DATA MIGRATION
+                </span>
+                <h3 class="panel-main-title" id="runway-ch1-title">10 TB LEGACY PIPELINE</h3>
+              </div>
+              <div class="panel-numeral">01</div>
+            </div>
+
+            <div class="panel-body-grid">
+              <div>
+                <h4 id="runway-ch1-mission-hdr"
+                  style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">
+                  ARCHITECTURAL MISSION
+                </h4>
+                <p id="runway-ch1-desc"
+                  style="font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Moving <strong>10 Terabytes of historical enterprise data</strong> from fragmented SharePoint APIs and
+                  disparate SQL instances into a consolidated SQL Server warehouse.
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span class="tech-tag">SharePoint API</span>
+                  <span class="tech-tag">SQL Server</span>
+                  <span class="tech-tag">Dynamic Partitioning</span>
+                  <span class="tech-tag">Zero Loss</span>
+                </div>
+              </div>
+
+              <!-- High-Tech Interactive Visual & Terminal Stream -->
+              <div>
+                <div class="pipeline-flow-diagram">
+                  <div class="pipeline-flow-step">
+                    <span class="step-tag">SOURCE</span>
+                    <span>SharePoint API (10TB)</span>
+                  </div>
+                  <span class="pipeline-flow-arrow">➔</span>
+                  <div class="pipeline-flow-step">
+                    <span class="step-tag">PARTITION</span>
+                    <span>Dynamic Workers [0..64]</span>
+                  </div>
+                  <span class="pipeline-flow-arrow">➔</span>
+                  <div class="pipeline-flow-step">
+                    <span class="step-tag">STAGING</span>
+                    <span>ACID Checkpoint</span>
+                  </div>
+                  <span class="pipeline-flow-arrow">➔</span>
+                  <div class="pipeline-flow-step">
+                    <span class="step-tag">TARGET</span>
+                    <span>SQL Server Cluster</span>
+                  </div>
+                </div>
+
+                <div class="runway-terminal-box">
+                  <div class="terminal-bar">
+                    <div class="terminal-dots"><span></span><span></span><span></span></div>
+                    <span>snp-migration-worker.stream.log</span>
+                    <span style="color:var(--accent-green)">● ACTIVE</span>
+                  </div>
+                  <div class="terminal-body" id="runway-ch1-terminal">
+                    <div class="terminal-log-line"><span style="color:var(--text-muted)">[BOOT]</span> Dynamic partition
+                      worker pool online: 64 concurrent streams</div>
+                    <div class="terminal-log-line"><span style="color:var(--accent-green)">[INGEST]</span> Batch #047:
+                      1,480,200 rows verified (0 packet loss)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-footer-row">
+              <span id="runway-ch1-client"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                CLIENT: SAIGON NEWPORT CORPORATION (SNP)
+              </span>
+              <span id="runway-ch1-result"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-green); font-weight: 600;">
+                RESULT: ~60 DAYS SLASHED TO 4.5 DAYS ➔
+              </span>
+            </div>
+          </article>
+
+          <!-- PANEL 02: WORKER THREADS CONCURRENCY -->
+          <article class="runway-panel">
+            <div class="panel-header-row">
+              <div>
+                <span class="tech-tag" id="runway-ch2-tag"
+                  style="background-color: var(--bg-accent-subtle); color: var(--accent-green); border-color: var(--accent-green);">
+                  CHAPTER 02 // HARDWARE CONCURRENCY
+                </span>
+                <h3 class="panel-main-title" id="runway-ch2-title">15x WORKER THREADS</h3>
+              </div>
+              <div class="panel-numeral">02</div>
+            </div>
+
+            <div class="panel-body-grid">
+              <div>
+                <h4 id="runway-ch2-hdr"
+                  style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">
+                  BOTTLENECK OVERCOME
+                </h4>
+                <p id="runway-ch2-desc"
+                  style="font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Eradicated single-threaded Node.js event-loop starvation by spawning a <strong>multi-threaded
+                    WorkerPool</strong> with chunk partitioning and SharedArrayBuffer synchronization.
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span class="tech-tag">Node.js Worker Threads</span>
+                  <span class="tech-tag">Multi-Core Parallelism</span>
+                  <span class="tech-tag">Chunk Partitioning</span>
+                  <span class="tech-tag">Batching</span>
+                </div>
+              </div>
+
+              <!-- High-Tech 8-Core CPU Matrix -->
+              <div>
+                <div class="core-thread-matrix">
+                  <div class="core-matrix-title" id="runway-ch2-matrix-title">8-CORE CPU PARTITION THREADPOOL</div>
+                  <div class="core-grid">
+                    <div class="core-box"><span class="core-label">CORE 01</span><span class="core-pct">94%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:94%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 02</span><span class="core-pct">91%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:91%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 03</span><span class="core-pct">96%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:96%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 04</span><span class="core-pct">89%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:89%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 05</span><span class="core-pct">92%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:92%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 06</span><span class="core-pct">95%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:95%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 07</span><span class="core-pct">88%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:88%"></div>
+                      </div>
+                    </div>
+                    <div class="core-box"><span class="core-label">CORE 08</span><span class="core-pct">93%</span>
+                      <div class="core-bar">
+                        <div class="core-fill" style="width:93%"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="thread-benchmark-badge">
+                    <span id="runway-ch2-starvation">EVENT LOOP STARVATION: RESOLVED</span>
+                    <span style="color:var(--accent-green);font-weight:700">6.2s ➔ 0.38s (15x BOOST)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-footer-row">
+              <span id="runway-ch2-stack"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                STACK: NODE.JS WORKER THREADS • BATCH PROCESSING
+              </span>
+              <span id="runway-ch2-fault"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-green); font-weight: 600;">
+                FAULT TOLERANCE: TRANSACTIONAL ROLLBACK ➔
+              </span>
+            </div>
+          </article>
+
+          <!-- PANEL 03: CAMUNDA BPMN & SECURITY -->
+          <article class="runway-panel">
+            <div class="panel-header-row">
+              <div>
+                <span class="tech-tag" id="runway-ch3-tag"
+                  style="background-color: var(--bg-accent-subtle); color: var(--accent-green); border-color: var(--accent-green);">
+                  CHAPTER 03 // ENTERPRISE GOVERNANCE
+                </span>
+                <h3 class="panel-main-title" id="runway-ch3-title">CAMUNDA BPMN CORE</h3>
+              </div>
+              <div class="panel-numeral">03</div>
+            </div>
+
+            <div class="panel-body-grid">
+              <div>
+                <h4 id="runway-ch3-hdr"
+                  style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">
+                  WORKFLOW-DRIVEN SECURITY
+                </h4>
+                <p id="runway-ch3-desc"
+                  style="font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Orchestrated dynamic enterprise workflows serving <strong>7,000+ users</strong>. Integrated hybrid
+                  <strong>RBAC + ABAC</strong> access control matrices without recompiling or redeploying backend
+                  services.
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span class="tech-tag">Camunda BPMN</span>
+                  <span class="tech-tag">NestJS</span>
+                  <span class="tech-tag">RBAC & ABAC</span>
+                  <span class="tech-tag">MinIO S3</span>
+                  <span class="tech-tag">WebSocket</span>
+                </div>
+              </div>
+
+              <!-- High-Tech BPMN Workflow Diagram -->
+              <div>
+                <div class="bpmn-visual-pipeline">
+                  <div class="bpmn-header" id="runway-ch3-engine-title">SNP ENTERPRISE 5-STAGE WORKFLOW ENGINE</div>
+                  <div class="bpmn-nodes-row">
+                    <div class="bpmn-node"><span class="bpmn-step">01</span><span class="bpmn-name">Doc Intake</span>
+                    </div>
+                    <span class="bpmn-arrow">➔</span>
+                    <div class="bpmn-node"><span class="bpmn-step">02</span><span class="bpmn-name">OAuth2 / RBAC</span>
+                    </div>
+                    <span class="bpmn-arrow">➔</span>
+                    <div class="bpmn-node active"><span class="bpmn-step">03</span><span class="bpmn-name">Camunda
+                        State</span></div>
+                    <span class="bpmn-arrow">➔</span>
+                    <div class="bpmn-node"><span class="bpmn-step">04</span><span class="bpmn-name">MinIO S3</span>
+                    </div>
+                    <span class="bpmn-arrow">➔</span>
+                    <div class="bpmn-node"><span class="bpmn-step">05</span><span class="bpmn-name">WS Broadcast</span>
+                    </div>
+                  </div>
+                  <div class="bpmn-audit-badge">
+                    <span id="runway-ch3-audit" style="color:var(--accent-green);">● AUDIT COMPLIANCE: 100% PASS</span>
+                    <span id="runway-ch3-mem">MEMORY: ZERO HEAP SPIKES</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-footer-row">
+              <span id="runway-ch3-sys"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                SYSTEM: ENTERPRISE DOCUMENT & MEETING WORKFLOWS
+              </span>
+              <span id="runway-ch3-sec"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-green); font-weight: 600;">
+                SECURITY: OAUTH2 • JWT AUDIT LOGGING ➔
+              </span>
+            </div>
+          </article>
+
+          <!-- PANEL 04: LOCAL AI MULTIMEDIA ENGINE -->
+          <article class="runway-panel">
+            <div class="panel-header-row">
+              <div>
+                <span class="tech-tag" id="runway-ch4-tag"
+                  style="background-color: var(--bg-accent-subtle); color: var(--accent-green); border-color: var(--accent-green);">
+                  CHAPTER 04 // LOCAL AI PIPELINE
+                </span>
+                <h3 class="panel-main-title" id="runway-ch4-title">AUTODUB MULTIMEDIA</h3>
+              </div>
+              <div class="panel-numeral">04</div>
+            </div>
+
+            <div class="panel-body-grid">
+              <div>
+                <h4 id="runway-ch4-hdr"
+                  style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;">
+                  OFFLINE MULTIMEDIA PIPELINE
+                </h4>
+                <p id="runway-ch4-desc"
+                  style="font-size: 1.15rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                  Engineered <strong>AutoDubStudio</strong>: A 100% local AI video translation and dubbing desktop
+                  engine with zero cloud APIs. Orchestrated Whisper, Ollama (Qwen), Piper TTS, and NVENC GPU video
+                  acceleration.
+                </p>
+                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                  <span class="tech-tag">Python & Tauri</span>
+                  <span class="tech-tag">faster-whisper</span>
+                  <span class="tech-tag">Ollama Qwen</span>
+                  <span class="tech-tag">Piper TTS</span>
+                  <span class="tech-tag">FFmpeg NVENC</span>
+                </div>
+              </div>
+
+              <!-- High-Tech Offline AI Multimedia Chain -->
+              <div>
+                <div class="autodub-visual-box">
+                  <div class="autodub-header" id="runway-ch4-chain-title">100% OFFLINE INFERENCE CHAIN (ZERO CLOUD LEAK)
+                  </div>
+                  <div class="autodub-chain">
+                    <div class="chain-step">
+                      <span class="step-badge">STT</span>
+                      <span class="step-title">Whisper</span>
+                      <span class="step-metric">GPU/CPU</span>
+                    </div>
+                    <span class="chain-divider">➔</span>
+                    <div class="chain-step">
+                      <span class="step-badge">LLM</span>
+                      <span class="step-title">Qwen 2.5</span>
+                      <span class="step-metric">Ollama Local</span>
+                    </div>
+                    <span class="chain-divider">➔</span>
+                    <div class="chain-step">
+                      <span class="step-badge">TTS</span>
+                      <span class="step-title">Piper</span>
+                      <span class="step-metric">Neural Voice</span>
+                    </div>
+                    <span class="chain-divider">➔</span>
+                    <div class="chain-step">
+                      <span class="step-badge">MUX</span>
+                      <span class="step-title">FFmpeg</span>
+                      <span class="step-metric">Ducking & Sync</span>
+                    </div>
+                  </div>
+                  <div class="autodub-footer-status">
+                    <span style="color:var(--accent-green);">● SQLite WAL Lock Safe</span>
+                    <span id="runway-ch4-status">100% Local GPU / Privacy First</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-footer-row">
+              <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+                GITHUB: /TTHIEU22/AUTODUBSTUDIO
+              </span>
+              <span id="runway-ch4-result"
+                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-green); font-weight: 600;">
+                COMPLETE // CONTINUE TO BENCHMARK LAB
+              </span>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Runway Bottom Bar -->
+        <div class="runway-bottom-bar">
+          <span id="runway-bottom-left">LATERAL VIEWPORT STREAM // INTERACTIVE SCROLL TRIGGERED</span>
+          <span id="runway-bottom-right">SYSTEM RADAR: 4 OF 4 NODES ONLINE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rest of Portfolio in Standard Container -->
+    <div class="app-container">
+
+      <!-- KEY METRICS TICKER -->
+      <section class="metrics-strip" id="metrics-strip-container" aria-label="Key Production Metrics">
+        <!-- 4 Cards Rendered dynamically by main.ts -->
+      </section>
+
+      <!-- 01 // INTERACTIVE ENGINEERING LAB -->
+      <section class="section-wrapper" id="lab">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index" id="lab-section-index">01 // INTERACTIVE ENGINEERING LAB</span>
+            <h2 class="section-title" id="lab-section-title">SYSTEMS IN ACTION</h2>
+          </div>
+          <div class="section-subtitle" id="lab-section-subtitle">
+            Interactive telemetry demonstrating real-world backend engineering: 15x Worker Threads throughput and BPMN
+            enterprise authorization.
+          </div>
+        </div>
+
+        <div class="interactive-lab-container">
+          <!-- Tab Navigation -->
+          <div class="lab-tabs-nav" role="tablist">
+            <button class="lab-tab-btn active" data-target="tab-architecture" role="tab" aria-selected="true">
+              <span class="btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+              </span>
+              <span id="tab-arch-label">Saigon Newport BPMN Architecture</span>
+            </button>
+            <button class="lab-tab-btn" data-target="tab-benchmark" role="tab" aria-selected="false">
+              <span class="btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              </span>
+              <span id="tab-bench-label">15x Worker Threads Benchmark</span>
+            </button>
+          </div>
+
+          <!-- TAB 1: ARCHITECTURE EXPLORER -->
+          <div class="lab-tab-pane active" id="tab-architecture" role="tabpanel">
+            <div style="margin-bottom: 2rem;">
+              <h3
+                style="font-family: var(--font-display); font-size: 1.4rem; color: var(--text-primary); margin-bottom: 0.35rem;"
+                id="arch-header-title">
+                Enterprise Document Management System — Saigon Newport (SNP)
+              </h3>
+              <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);"
+                id="arch-header-desc">
+                Click on any architecture node below to inspect design decisions, ABAC security logic, and real
+                production code snippets.
+              </p>
+            </div>
+
+            <!-- Clickable Interactive Nodes -->
+            <div class="arch-diagram-flow">
+              <div class="arch-node selected" data-node="client-node">
+                <div class="arch-node-badge">NODE 01</div>
+                <div class="arch-node-title" id="arch-node-1-title">Client Layer</div>
+                <div class="arch-node-subtitle" id="arch-node-1-sub">7,000+ Users • Web & App</div>
+                <span class="arch-arrow">➔</span>
+              </div>
+
+              <div class="arch-node" data-node="gateway-node">
+                <div class="arch-node-badge">NODE 02</div>
+                <div class="arch-node-title" id="arch-node-2-title">NestJS Gateway</div>
+                <div class="arch-node-subtitle" id="arch-node-2-sub">OAuth2 • JWT Guards</div>
+                <span class="arch-arrow">➔</span>
+              </div>
+
+              <div class="arch-node" data-node="camunda-node">
+                <div class="arch-node-badge">NODE 03</div>
+                <div class="arch-node-title" id="arch-node-3-title">Camunda BPMN</div>
+                <div class="arch-node-subtitle" id="arch-node-3-sub">Dynamic RBAC + ABAC</div>
+                <span class="arch-arrow">➔</span>
+              </div>
+
+              <div class="arch-node" data-node="worker-node">
+                <div class="arch-node-badge">NODE 04</div>
+                <div class="arch-node-title" id="arch-node-4-title">File Workers</div>
+                <div class="arch-node-subtitle" id="arch-node-4-sub">DOCX/PDF Stream Java</div>
+                <span class="arch-arrow">➔</span>
+              </div>
+
+              <div class="arch-node" data-node="storage-node">
+                <div class="arch-node-badge">NODE 05</div>
+                <div class="arch-node-title" id="arch-node-5-title">Storage Tier</div>
+                <div class="arch-node-subtitle" id="arch-node-5-sub">SQL Server • MinIO • Redis</div>
+              </div>
+            </div>
+
+            <!-- Deep-dive Inspector Panel -->
+            <div class="arch-inspector-panel">
+              <div class="inspector-header">
+                <div>
+                  <span class="metric-tag" id="inspector-badge">EDGE & CLIENTS</span>
+                  <h4 class="inspector-title" id="inspector-title">Client Layer — 7,000+ Enterprise Users</h4>
+                </div>
+                <span class="tech-tag" style="color: var(--accent-green); border-color: var(--accent-green);"
+                  id="arch-inspector-badge-label">INTERACTIVE INSPECTOR</span>
+              </div>
+
+              <div class="inspector-spec-grid">
+                <div class="inspector-desc">
+                  <h5 id="inspector-hdr-problem">Technical Challenge (Problem)</h5>
+                  <p id="inspector-problem">Supporting 7,000+ simultaneous personnel across Saigon Newport Corporation
+                    (SNP) from internal web portals, mobile apps, and MS Office desktop extensions.</p>
+
+                  <h5 id="inspector-hdr-solution">Architectural Solution</h5>
+                  <p id="inspector-solution">Connected via secure HTTPS with a persistent WebSocket channel to receive
+                    instant real-time broadcasts as document stages advance across approval workflows.</p>
+
+                  <h5 id="inspector-hdr-impact">Measured Impact</h5>
+                  <p id="inspector-impact" style="font-weight: 600; color: var(--accent-green);">Notification latency
+                    &lt; 150ms; eliminated 90% of wasteful HTTP polling traffic to servers.</p>
+                </div>
+
+                <div>
+                  <div id="inspector-hdr-pattern"
+                    style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase;">
+                    Production Implementation Pattern
+                  </div>
+                  <pre class="code-snippet-box"><code id="inspector-code">// WebSocket Subscription for Real-time Document Status
+@WebSocketGateway({ namespace: '/documents' })
+export class DocumentGateway {
+  @SubscribeMessage('subscribe_doc')
+  handleDocSubscription(client: Socket, docId: string) {
+    client.join(`doc_${docId}`);
+  }
+}</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: BENCHMARK SIMULATOR -->
+          <div class="lab-tab-pane" id="tab-benchmark" role="tabpanel">
+            <div class="bench-controls-bar">
+              <div class="bench-title-group">
+                <h3 id="bench-title-text">Internal Data Synchronization Tool (10 TB Migration)</h3>
+                <p id="bench-desc-text">Simulating 1M+ document migration: Single-Threaded Legacy vs Parallel Worker
+                  Threads Partitioning</p>
+              </div>
+              <div class="bench-actions">
+                <select class="bench-dataset-select" id="bench-dataset-select" aria-label="Select Dataset Size">
+                  <option value="1000" id="bench-opt-1k">1,000 Documents</option>
+                  <option value="10000" id="bench-opt-10k" selected>10,000 Documents</option>
+                  <option value="50000" id="bench-opt-50k">50,000 Documents</option>
+                </select>
+                <button class="btn btn-primary" id="bench-run-btn">
+                  <span class="btn-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </span>
+                  <span id="bench-run-btn-text">START BENCHMARK</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dual Lane Comparison -->
+            <div class="bench-dual-grid">
+              <!-- Lane 1: Legacy Engine -->
+              <div class="bench-lane">
+                <div class="bench-lane-header">
+                  <div class="bench-lane-title">
+                    <span id="bench-legacy-title-text">LEGACY ENGINE</span>
+                    <span style="font-size: 0.7rem; font-weight: 400; color: var(--text-muted);"
+                      id="bench-legacy-sub-text">(Single-Threaded I/O)</span>
+                  </div>
+                  <span class="tech-tag" id="bench-bottleneck-badge">BOTTLENECK</span>
+                </div>
+
+                <div class="bench-stat-strip">
+                  <div class="bench-stat-box">
+                    <div class="bench-stat-label" id="bench-legacy-lat-label">Avg Latency / Doc</div>
+                    <div class="bench-stat-value" id="legacy-latency">6,200 ms</div>
+                  </div>
+                  <div class="bench-stat-box">
+                    <div class="bench-stat-label" id="bench-legacy-proc-label">Processed Docs</div>
+                    <div class="bench-stat-value" id="legacy-processed">0</div>
+                  </div>
+                </div>
+
+                <div class="bench-progress-wrap">
+                  <div class="bench-progress-label">
+                    <span id="bench-legacy-prog-label">Batch Sync Progress</span>
+                    <span id="legacy-percent">0%</span>
+                  </div>
+                  <div class="bench-progress-track">
+                    <div class="bench-progress-fill" id="legacy-progress-fill"></div>
+                  </div>
+                </div>
+
+                <div
+                  style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); line-height: 1.5;"
+                  id="bench-legacy-note-text">
+                  • Bottleneck: Blocked on SharePoint I/O, sequential single thread, estimated 60 days to finish 10 TB.
+                </div>
+              </div>
+
+              <!-- Lane 2: Optimized Worker Threads Engine -->
+              <div class="bench-lane optimized">
+                <div class="bench-lane-header">
+                  <div class="bench-lane-title">
+                    <span id="bench-worker-title-text">OPTIMIZED ARCHITECTURE</span>
+                    <span style="font-size: 0.7rem; font-weight: 400; color: var(--accent-green);"
+                      id="bench-worker-sub-text">(Worker Threads + Chunking)</span>
+                  </div>
+                  <span class="tech-tag" id="bench-boost-badge"
+                    style="background-color: var(--bg-accent-subtle); color: var(--accent-green); border-color: var(--accent-green);">15.2x
+                    BOOST</span>
+                </div>
+
+                <div class="bench-stat-strip">
+                  <div class="bench-stat-box">
+                    <div class="bench-stat-label" id="bench-worker-lat-label">Avg Latency / Doc</div>
+                    <div class="bench-stat-value highlight-green" id="worker-latency">380 ms</div>
+                  </div>
+                  <div class="bench-stat-box">
+                    <div class="bench-stat-label" id="bench-worker-proc-label">Processed Docs</div>
+                    <div class="bench-stat-value highlight-green" id="worker-processed">0</div>
+                  </div>
+                </div>
+
+                <div class="bench-progress-wrap">
+                  <div class="bench-progress-label">
+                    <span id="bench-worker-prog-label">Batch Sync Progress</span>
+                    <span id="worker-percent">0%</span>
+                  </div>
+                  <div class="bench-progress-track">
+                    <div class="bench-progress-fill optimized-fill" id="worker-progress-fill"></div>
+                  </div>
+                </div>
+
+                <div class="workers-grid">
+                  <div class="worker-thread-box">THREAD 01<br><span class="bench-thread-parallel-sub"
+                      style="font-size: 0.62rem;">PARALLEL</span></div>
+                  <div class="worker-thread-box">THREAD 02<br><span class="bench-thread-parallel-sub"
+                      style="font-size: 0.62rem;">PARALLEL</span></div>
+                  <div class="worker-thread-box">THREAD 03<br><span class="bench-thread-parallel-sub"
+                      style="font-size: 0.62rem;">PARALLEL</span></div>
+                  <div class="worker-thread-box">THREAD 04<br><span class="bench-thread-parallel-sub"
+                      style="font-size: 0.62rem;">PARALLEL</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Realtime Logs -->
+            <div style="margin-top: 1.5rem;">
+              <div
+                style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.4rem;">
+                <span id="bench-telemetry-header-text">SYSTEM EVENT BUS TELEMETRY (LIVE LOGS)</span>
+                <span>STREAM BUFFER: ACTIVE</span>
+              </div>
+              <div class="bench-terminal" id="bench-terminal-logs">
+                <div class="terminal-line"><span class="time">00:00:00</span> [READY] Telemetry initialized. Click
+                  "START BENCHMARK" to execute parallel synchronization.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 // PRODUCTION CASE STUDIES -->
+      <section class="section-wrapper" id="case-studies">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index" id="cases-section-index">02 // PRODUCTION CASE STUDIES</span>
+            <h2 class="section-title" id="cases-section-title">ENTERPRISE WORK</h2>
+          </div>
+          <div class="section-subtitle" id="cases-section-subtitle">
+            Large-scale enterprise systems designed, engineered, and optimized in high-demand production environments.
+          </div>
+        </div>
+
+        <div class="case-studies-list" id="case-studies-container">
+          <!-- Rendered dynamically from profile-data.ts -->
+        </div>
+      </section>
+
+      <!-- 03 // PERSONAL PROJECTS -->
+      <section class="section-wrapper" id="projects">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index" id="proj-section-index">03 // PERSONAL PROJECTS</span>
+            <h2 class="section-title" id="proj-section-title">SYSTEM EXPERIMENTS</h2>
+          </div>
+          <div class="section-subtitle" id="proj-section-subtitle">
+            Architectural research into Modular Monoliths, RabbitMQ asynchronous queues, and Optimistic Concurrency
+            Locking.
+          </div>
+        </div>
+
+        <div class="case-studies-list" id="personal-projects-container">
+          <!-- Rendered dynamically from profile-data.ts -->
+        </div>
+      </section>
+
+      <!-- 04 // TECHNICAL ARSENAL -->
+      <section class="section-wrapper" id="skills">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <span class="section-index" id="skills-section-index">04 // TECHNICAL ARSENAL</span>
+            <h2 class="section-title" id="skills-section-title">STACK & CAPABILITIES</h2>
+          </div>
+          <div class="section-subtitle" id="skills-section-subtitle">
+            Categorized by architectural responsibility: Runtimes, Frameworks, Storage, and Concurrency Engines.
+          </div>
+        </div>
+
+        <div class="arsenal-grid" id="arsenal-grid-container">
+          <!-- Rendered dynamically from profile-data.ts -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 05 // SITE FOOTER & CONTACT -->
+  <footer class="site-footer" id="contact">
+    <div class="app-container">
+      <div class="footer-main-grid">
+        <div>
+          <span class="section-index" style="display: block; margin-bottom: 0.75rem;" id="contact-section-index">05 //
+            INITIATE CONTACT</span>
+          <h2 class="footer-cta-title" id="contact-cta-title">
+            LET'S BUILD<br>
+            SOMETHING SCALABLE.
+          </h2>
+          <p style="font-size: 1.1rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 2rem;"
+            id="contact-cta-desc">
+            I am actively open to challenging opportunities in Backend Engineering and Distributed Systems. Let's
+            discuss your system architecture.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="mailto:tthieu.dev.02@gmail.com" class="btn btn-primary">
+              <span class="btn-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <span id="contact-btn-email-text">SEND DIRECT EMAIL</span>
+            </a>
+            <button class="btn btn-outline" id="footer-copy-email-btn" title="Sao chép email vào clipboard">
+              <span class="btn-icon" id="footer-copy-email-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              </span>
+              <span>COPY: <span id="footer-email-text">tthieu.dev.02@gmail.com</span></span>
+            </button>
+          </div>
+        </div>
+
+        <div
+          style="background-color: var(--bg-card); border: 1px solid var(--border-color); padding: 2rem; border-radius: var(--radius-xs);">
+          <div
+            style="font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem;"
+            id="contact-card-header-text">
+            TRANSMISSION PROFILE CARD
+          </div>
+          <div
+            style="display: flex; flex-direction: column; gap: 1rem; font-family: var(--font-mono); font-size: 0.85rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="btn-icon" style="color: var(--accent-green);" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <span style="color: var(--text-muted);" id="contact-phone-label">PHONE:</span>
+              <strong style="margin-left: auto; color: var(--text-primary);" id="footer-phone-text">0862 584 283</strong>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="btn-icon" style="color: var(--accent-green);" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+              <span style="color: var(--text-muted);" id="contact-location-label">LOCATION:</span>
+              <strong style="margin-left: auto; color: var(--text-primary);" id="footer-location-text">Thanh Tri, Hanoi, Vietnam</strong>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="btn-icon" style="color: var(--accent-green);" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></span>
+              <span style="color: var(--text-muted);" id="contact-github-label">GITHUB:</span>
+              <a href="https://github.com/tthieu22" target="_blank" rel="noopener" class="github-link-target"
+                style="margin-left: auto; color: var(--text-primary); text-decoration: underline; display: inline-flex; align-items: center; gap: 0.35rem;">
+                <span>github.com/tthieu22</span>
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="btn-icon" style="color: var(--accent-green);" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></span>
+              <span style="color: var(--text-muted);" id="contact-avail-label">AVAILABILITY:</span>
+              <span style="margin-left: auto; color: var(--accent-green); font-weight: 600;"
+                id="footer-avail-text">Available within 1 month after official offer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div id="footer-copyright-text">
+          © 2026 TRAN TRONG HIEU • ARCHITECTED WITH TYPESCRIPT & ZERO-WASTE ENGINEERING
+        </div>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+          <a href="#hero" style="color: var(--text-muted); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;" id="footer-back-top-link">
+            <span id="footer-back-top-text">BACK TO TOP</span>
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+          </a>
+          <span style="color: var(--text-muted);" id="footer-latency-text">LATENCY: &lt;10ms</span>
+          <span style="color: var(--accent-green);" id="footer-nominal-text">● ALL SYSTEMS NOMINAL</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- Application TypeScript Module Entry Point -->
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
+</html>
