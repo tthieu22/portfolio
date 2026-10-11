@@ -235,8 +235,9 @@ function renderUiChrome(data: PortfolioData): void {
   setElementText('contact-phone-label', ui.contactPhoneLabel);
   setElementText('contact-location-label', ui.contactLocationLabel);
   setElementText('contact-github-label', ui.contactGithubLabel);
-  setElementText('contact-avail-label', ui.contactAvailLabel);
-  setElementText('footer-copyright-text', ui.footerCopyright);
+  const currentYear = new Date().getFullYear();
+  const copyrightText = ui.footerCopyright.replace(/\b\d{4}\b/, String(currentYear));
+  setElementText('footer-copyright-text', copyrightText);
   setElementText('footer-back-top-text', ui.footerBackTop);
   setElementText('footer-latency-text', ui.footerLatency);
   setElementText('footer-nominal-text', ui.footerNominal);

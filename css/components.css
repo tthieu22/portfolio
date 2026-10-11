@@ -745,3 +745,140 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+/* --- TRANSMISSION SPEC CARD (FOOTER CONTACT) --- */
+.contact-transmission-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: var(--radius-xs);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact-transmission-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.transmission-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dashed var(--border-subtle);
+}
+
+.transmission-card-header-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.transmission-card-status {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-green);
+  background-color: rgba(16, 185, 129, 0.08);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  display: inline-flex;
+  align-items: center;
+}
+
+.transmission-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.transmission-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.transmission-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.transmission-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  padding-top: 0.05rem;
+}
+
+.transmission-label .btn-icon {
+  color: var(--accent-green);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transmission-value {
+  margin-left: auto;
+  text-align: right;
+  line-height: 1.5;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  word-break: break-word;
+}
+
+.transmission-link {
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.transmission-link:hover {
+  color: var(--accent-green);
+}
+
+.transmission-avail {
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .contact-transmission-card {
+    padding: 1.25rem;
+  }
+  .transmission-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding-bottom: 0.75rem;
+  }
+  .transmission-value {
+    margin-left: 0;
+    text-align: left;
+    padding-left: 1.45rem;
+  }
+}
+

@@ -77,12 +77,24 @@ function initStickyHorizontalRunway(): void {
     });
   };
 
+  const isMobile = (): boolean => window.innerWidth <= 768;
+
   /**
-   * Điều hướng đến slide chỉ định với hiệu ứng căn chỉnh mượt mà
+   * Điều hướng đến slide chỉ định: Trên mobile cuộn mượt đến thẻ tương ứng, trên desktop trượt ngang
    */
   const goToSlide = (idx: number): void => {
     if (idx < 0 || idx >= TOTAL_SLIDES) return;
     currentSlide = idx;
+
+    if (isMobile()) {
+      track.style.transform = '';
+      const panels = track.querySelectorAll<HTMLElement>('.runway-panel');
+      if (panels[idx]) {
+        panels[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      updateUI(currentSlide);
+      return;
+    }
 
     const targetX = getSlideTranslate(currentSlide);
     track.style.transform = `translate3d(-${targetX.toFixed(2)}px, 0, 0)`;
@@ -91,11 +103,12 @@ function initStickyHorizontalRunway(): void {
   };
 
   /**
-   * Bắt sự kiện lăn chuột: Dù cuộn mạnh hay nhẹ đều chuyển ĐÚNG 1 slide rồi căn chỉnh
+   * Bắt sự kiện lăn chuột: Chỉ áp dụng trên desktop khi runway được ghim 100vh
    */
   const handleWheel = (e: WheelEvent): void => {
+    if (isMobile()) return;
+
     const rect = runwaySection.getBoundingClientRect();
-    // Kiểm tra runway có đang được ghim trong khung nhìn (pinned) hay không
     const isPinned = rect.top <= 10 && rect.bottom >= window.innerHeight - 10;
     if (!isPinned) return;
 
@@ -113,7 +126,6 @@ function initStickyHorizontalRunway(): void {
           goToSlide(currentSlide + 1);
         }
       }
-      // Nếu đã ở slide cuối cùng (Slide 4), cho phép cuộn tự nhiên xuống phần tiếp theo
     } else {
       // Cuộn LÊN: Quay lại slide trước
       if (currentSlide > 0) {
@@ -123,7 +135,6 @@ function initStickyHorizontalRunway(): void {
           goToSlide(currentSlide - 1);
         }
       }
-      // Nếu đã ở slide đầu tiên (Slide 1), cho phép cuộn tự nhiên lên lại Hero
     }
   };
 
@@ -134,8 +145,10 @@ function initStickyHorizontalRunway(): void {
     });
   });
 
-  // Hỗ trợ phím mũi tên trên bàn phím khi đang ở runway
+  // Hỗ trợ phím mũi tên trên bàn phím khi đang ở runway trên desktop
   window.addEventListener('keydown', (e: KeyboardEvent) => {
+    if (isMobile()) return;
+
     const rect = runwaySection.getBoundingClientRect();
     const isPinned = rect.top <= 15 && rect.bottom >= window.innerHeight - 15;
     if (!isPinned) return;
@@ -153,10 +166,11 @@ function initStickyHorizontalRunway(): void {
     }
   });
 
-  // Hỗ trợ vuốt ngón tay (Touch swipe) trên điện thoại / trackpad
+  // Hỗ trợ vuốt ngón tay (Touch swipe) trên màn hình lớn/tablet nếu cần
   let touchStartY = 0;
   let touchStartX = 0;
   runwaySection.addEventListener('touchstart', (e: TouchEvent) => {
+    if (isMobile()) return;
     if (e.touches.length > 0) {
       touchStartY = e.touches[0].clientY;
       touchStartX = e.touches[0].clientX;
@@ -164,6 +178,8 @@ function initStickyHorizontalRunway(): void {
   }, { passive: true });
 
   runwaySection.addEventListener('touchend', (e: TouchEvent) => {
+    if (isMobile()) return;
+
     const rect = runwaySection.getBoundingClientRect();
     const isPinned = rect.top <= 15 && rect.bottom >= window.innerHeight - 15;
     if (!isPinned || e.changedTouches.length === 0) return;
@@ -181,8 +197,22 @@ function initStickyHorizontalRunway(): void {
     }
   }, { passive: true });
 
-  // Reset slide khi người dùng cuộn vượt hẳn ra ngoài runway từ trên hoặc từ dưới
+  // Theo dõi cuộn trang: Trên mobile tự động highlight pill tương ứng, trên desktop reset biên độ
   window.addEventListener('scroll', () => {
+    if (isMobile()) {
+      const panels = track.querySelectorAll<HTMLElement>('.runway-panel');
+      panels.forEach((p, i) => {
+        const r = p.getBoundingClientRect();
+        if (r.top <= window.innerHeight * 0.45 && r.bottom >= window.innerHeight * 0.15) {
+          if (currentSlide !== i) {
+            currentSlide = i;
+            updateUI(i);
+          }
+        }
+      });
+      return;
+    }
+
     const rect = runwaySection.getBoundingClientRect();
     if (rect.top > window.innerHeight * 0.4) {
       if (currentSlide !== 0) {
@@ -197,16 +227,26 @@ function initStickyHorizontalRunway(): void {
     }
   }, { passive: true });
 
-  // Đăng ký wheel listener với passive: false để can thiệp chặn lướt ẩu
+  // Đăng ký wheel listener với passive: false
   window.addEventListener('wheel', handleWheel, { passive: false });
 
   // Tái căn chỉnh khi thay đổi kích thước cửa sổ
   window.addEventListener('resize', () => {
-    goToSlide(currentSlide);
+    if (isMobile()) {
+      track.style.transform = '';
+      updateUI(currentSlide);
+    } else {
+      goToSlide(currentSlide);
+    }
   }, { passive: true });
 
   // Khởi tạo ban đầu
-  goToSlide(0);
+  if (isMobile()) {
+    track.style.transform = '';
+    updateUI(0);
+  } else {
+    goToSlide(0);
+  }
 }
 
 
