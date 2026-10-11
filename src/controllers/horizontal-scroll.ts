@@ -279,10 +279,10 @@ function initRunwaySimulations(): void {
   const logTerminal = document.getElementById('runway-ch1-terminal');
   if (logTerminal) {
     const logMessages = [
-      '[SNP-SYNC:01] Ingesting SharePoint batch #048 (50,000 items)...',
+      '[SYNC-WORKER:01] Ingesting SharePoint batch #048 (50,000 items)...',
       '[PARTITION] Spawning dynamic worker chunk [48..56]...',
       '[TRANSACTION] ACID checkpoint committed to SQL Server: 0 loss',
-      '[SNP-SYNC:02] Ingesting SharePoint batch #049 (50,000 items)...',
+      '[SYNC-WORKER:02] Ingesting SharePoint batch #049 (50,000 items)...',
       '[THROUGHPUT] 1.48M rows committed in 420ms | Checksum OK'
     ];
     let msgIdx = 0;

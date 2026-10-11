@@ -54,7 +54,7 @@ export const portfolioDictionary: PortfolioDictionary = {
         rawNumber: 7000,
         suffix: "+",
         label: "Enterprise Users Served",
-        description: "Enterprise Document Management System for SNP (Saigon Newport Corporation) covering duty scheduling, meetings, and workflows",
+        description: "Enterprise Document Management System for a leading Port & Logistics Corporation covering duty scheduling, meetings, and workflows",
         tag: "SCALE"
       },
       {
@@ -71,13 +71,13 @@ export const portfolioDictionary: PortfolioDictionary = {
     caseStudies: [
       {
         id: "snp-doc-management",
-        client: "SNP (Saigon Newport Corporation)",
+        client: "Leading Port & Logistics Corporation",
         company: "LIFETEX TECHNOLOGY JSC",
         period: "Jul 2025 – Present",
         role: "Backend Developer",
-        title: "Enterprise Document Management System — SNP",
+        title: "Enterprise Document Management System",
         highlight: "Workflow-Driven Authorization & 7,000+ Users Scale",
-        problem: "Saigon Newport Corporation needed an enterprise management system serving 7,000+ users to govern document lifecycles, meeting workflows, duty scheduling, reporting, and other internal business modules across multiple organizational roles.",
+        problem: "A leading port operations and maritime logistics corporation needed an enterprise management system serving 7,000+ users to govern document lifecycles, meeting workflows, duty scheduling, reporting, and other internal business modules across multiple organizational roles.",
         solution: "Developed NestJS backend services integrated with Camunda BPMN, RBAC, and ABAC for workflow-driven authorization. Integrated with Java-based file-processing modules and MinIO storage for large-scale DOCX, PDF, and Excel exports with WebSocket notifications. Implemented OAuth2/JWT authentication, audit logging, and optimized SQL Server queries.",
         techStack: ["NestJS", "SQL Server", "TypeORM", "Camunda BPMN", "Redis", "WebSocket", "MinIO", "OAuth2", "JWT", "Java"],
         metrics: [
@@ -89,11 +89,11 @@ export const portfolioDictionary: PortfolioDictionary = {
       },
       {
         id: "snp-data-sync",
-        client: "SNP (Saigon Newport Corporation)",
+        client: "Leading Port & Logistics Corporation",
         company: "LIFETEX TECHNOLOGY JSC",
         period: "Jul 2025 – Present",
         role: "Backend Developer",
-        title: "Internal Data Synchronization Tool — SNP",
+        title: "Internal Data Synchronization Tool (10 TB Migration)",
         highlight: "10 TB Migration: 6s ➔ 0.4s Synchronization Speedup",
         problem: "Need to synchronize and migrate ~10 TB of legacy enterprise data from SharePoint and multiple SQL sources to SQL Server, comprising over 1 million documents and related tables with 4–5 million records each (2014–2026). Initial timeline was estimated at nearly 2 months.",
         solution: "Built a high-performance data synchronization system in Node.js utilizing Worker Threads, data partitioning, and parallel batch processing. Implemented transactional processing and robust retry strategies for fault tolerance and strict data consistency.",
@@ -107,20 +107,20 @@ export const portfolioDictionary: PortfolioDictionary = {
       },
       {
         id: "snp-digital-signature",
-        client: "SNP (Saigon Newport Corporation)",
+        client: "Leading Port & Logistics Corporation",
         company: "LIFETEX TECHNOLOGY JSC",
         period: "Jul 2025 – Present",
         role: "Backend Developer",
-        title: "Digital Signature Service — SNP",
+        title: "Enterprise Digital Signature Service",
         highlight: "USB Token Cryptographic Signing & PDF Transformation Pipeline",
-        problem: "Saigon Newport Corporation needed to modernize an internally developed digital signature service for paperless electronic document flows, supporting USB Token hardware signing and embedding valid digital certificates directly into enterprise document approval lifecycles.",
+        problem: "The enterprise client needed to modernize an internally developed digital signature service for paperless electronic document flows, supporting USB Token hardware signing and embedding valid digital certificates directly into enterprise document approval lifecycles.",
         solution: "Upgraded the internal digital signature service using Java and Spring Boot, modernizing legacy architecture and adapting business logic to new requirements. Supported the automated DOC-to-PDF conversion workflow, USB Token-based electronic signing, and embedding signature images alongside digital certificate verification metadata into signed PDF documents. Seamlessly integrated the upgraded signing service into the enterprise document management workflow.",
         techStack: ["Java", "Spring Boot", "USB Token", "Digital Signature", "PDF Processing", "Cryptography", "Enterprise Integration"],
         metrics: [
           "Modernized legacy codebase and adapted business logic to meet new digital enterprise requirements",
           "Engineered DOC-to-PDF conversion workflow with hardware USB Token-based digital signing",
           "Embedded visual signature stamps and cryptographic certificate validation into signed PDFs",
-          "Integrated upgraded digital signing service into Saigon Newport enterprise document workflow"
+          "Integrated upgraded digital signing service into corporate document management workflow"
         ],
         architectureSummary: "DOC Intake ➔ Java DOC-to-PDF Converter ➔ USB Token Signing Module ➔ Certified PDF Output ➔ Enterprise Document System"
       },
@@ -271,7 +271,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       labSectionTitle: "SYSTEMS IN ACTION",
       labSectionSubtitle: "Interactive telemetry demonstrating real-world backend engineering: 15x Worker Threads throughput and BPMN enterprise authorization.",
       tabBenchmark: "15x Worker Threads Benchmark",
-      tabArchitecture: "Saigon Newport BPMN Architecture",
+      tabArchitecture: "Enterprise BPMN Architecture",
       benchTitle: "Internal Data Synchronization Tool (10 TB Migration)",
       benchSubtitle: "Simulating 1M+ document migration: Single-Threaded Legacy vs Parallel Worker Threads Partitioning",
       benchDataset1k: "1,000 Documents",
@@ -289,7 +289,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       benchProgressLabel: "Batch Sync Progress",
       benchLegacyNote: "• Legacy Bottleneck: SharePoint I/O throttling, single-threaded processing, initial timeline projected at nearly 2 months.",
       benchTelemetryHeader: "SYSTEM EVENT BUS TELEMETRY (LIVE LOGS)",
-      archHeaderTitle: "Enterprise Document Management System — SNP (Saigon Newport)",
+      archHeaderTitle: "Enterprise Document Management System — Port & Logistics Corporation",
       archHeaderDesc: "Click on any architecture node below to inspect design decisions, ABAC security logic, and real production code snippets.",
       archInspectorBadge: "INTERACTIVE INSPECTOR",
       archInspectorProblem: "Business Challenge",
@@ -333,7 +333,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       runwayCh1Title: "10 TB LEGACY PIPELINE",
       runwayCh1MissionHeader: "ARCHITECTURAL MISSION",
       runwayCh1MissionDesc: "Moving 10 Terabytes of historical enterprise data from fragmented SharePoint APIs and disparate SQL instances into a consolidated SQL Server warehouse.",
-      runwayCh1Client: "CLIENT: SAIGON NEWPORT CORPORATION (SNP)",
+      runwayCh1Client: "CLIENT: LEADING MARITIME & LOGISTICS CORPORATION",
       runwayCh1Result: "RESULT: ~60 DAYS SLASHED TO 4.5 DAYS ➔",
       runwayCh2Tag: "CHAPTER 02 // HARDWARE CONCURRENCY",
       runwayCh2Title: "15x WORKER THREADS",
@@ -347,7 +347,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       runwayCh3Title: "CAMUNDA BPMN CORE",
       runwayCh3SecHeader: "WORKFLOW-DRIVEN SECURITY",
       runwayCh3SecDesc: "Orchestrated dynamic enterprise workflows serving 7,000+ users. Integrated hybrid RBAC + ABAC access control matrices without recompiling or redeploying backend services.",
-      runwayCh3EngineTitle: "SNP ENTERPRISE 5-STAGE WORKFLOW ENGINE",
+      runwayCh3EngineTitle: "ENTERPRISE 5-STAGE WORKFLOW ENGINE",
       runwayCh3AuditBadge: "● AUDIT COMPLIANCE: 100% PASS",
       runwayCh3MemoryBadge: "MEMORY: ZERO HEAP SPIKES",
       runwayCh3System: "SYSTEM: ENTERPRISE DOCUMENT & MEETING WORKFLOWS",
@@ -428,7 +428,7 @@ export const portfolioDictionary: PortfolioDictionary = {
         rawNumber: 7000,
         suffix: "+",
         label: "Quy Mô Người Dùng Doanh Nghiệp",
-        description: "Hệ thống quản lý văn bản doanh nghiệp cho SNP (Tân Cảng Sài Gòn) phục vụ quy trình họp, lịch trực và nghiệp vụ",
+        description: "Hệ thống quản lý văn bản doanh nghiệp cho Tập đoàn Cảng biển & Logistics hàng đầu phục vụ quy trình họp, lịch trực và nghiệp vụ",
         tag: "QUY MÔ"
       },
       {
@@ -445,13 +445,13 @@ export const portfolioDictionary: PortfolioDictionary = {
     caseStudies: [
       {
         id: "snp-doc-management",
-        client: "SNP (Tổng công ty Tân Cảng Sài Gòn)",
+        client: "Tập Đoàn Cảng Biển & Logistics Hàng Đầu",
         company: "LIFETEX TECHNOLOGY JSC",
         period: "07/2025 – Hiện tại",
         role: "Backend Developer",
-        title: "Hệ Thống Quản Lý Văn Bản Doanh Nghiệp — SNP",
+        title: "Hệ Thống Quản Lý Văn Bản Doanh Nghiệp",
         highlight: "Phân Quyền Theo Quy Trình & Phục Vụ 7,000+ Người Dùng",
-        problem: "Phát triển các dịch vụ backend NestJS cho hệ thống quản lý doanh nghiệp phục vụ 7,000+ người dùng, bao quát quản lý văn bản, quy trình họp, phân công lịch trực, báo cáo và các module nghiệp vụ nội bộ khác.",
+        problem: "Phát triển các dịch vụ backend NestJS cho hệ thống quản lý doanh nghiệp cảng biển & logistics quy mô 7,000+ người dùng, bao quát quản lý văn bản, quy trình họp, phân công lịch trực, báo cáo và các module nghiệp vụ nội bộ khác.",
         solution: "Thiết kế phân quyền dựa trên quy trình sử dụng Camunda BPMN, RBAC và ABAC để quản lý quy trình nghiệp vụ, vòng đời văn bản và quyền truy cập theo vai trò tổ chức. Tích hợp các dịch vụ NestJS với module xử lý file Java, lưu trữ MinIO và thông báo WebSocket; hỗ trợ xuất file DOCX, PDF, Excel dung lượng lớn. Triển khai xác thực OAuth2/JWT, audit logging và tối ưu hóa truy vấn SQL Server.",
         techStack: ["NestJS", "SQL Server", "TypeORM", "Camunda BPMN", "Redis", "WebSocket", "MinIO", "OAuth2", "JWT", "Java"],
         metrics: [
@@ -463,11 +463,11 @@ export const portfolioDictionary: PortfolioDictionary = {
       },
       {
         id: "snp-data-sync",
-        client: "SNP (Tổng công ty Tân Cảng Sài Gòn)",
+        client: "Tập Đoàn Cảng Biển & Logistics Hàng Đầu",
         company: "LIFETEX TECHNOLOGY JSC",
         period: "07/2025 – Hiện tại",
         role: "Backend Developer",
-        title: "Công Cụ Đồng Bộ Dữ Liệu Nội Bộ — SNP",
+        title: "Công Cụ Đồng Bộ Dữ Liệu Nội Bộ (10 TB Data Migration)",
         highlight: "Di Chuyển 10 TB Dữ Liệu: 6 Giây ➔ 0.4 Giây / Tài Liệu",
         problem: "Xây dựng hệ thống đồng bộ và di chuyển khoảng 10 TB dữ liệu cũ từ SharePoint và nhiều nguồn SQL sang SQL Server, bao gồm hơn 1 triệu tài liệu và các bảng liên quan chứa 4–5 triệu bản ghi mỗi bảng (dữ liệu 2014 - 2026). Thời gian ban đầu ước tính gần 2 tháng.",
         solution: "Áp dụng Worker Threads, phân vùng dữ liệu và xử lý song song trên Node.js. Giảm thời gian đồng bộ mỗi tài liệu từ khoảng 6 giây xuống 0.4 giây. Rút ngắn toàn bộ thời gian di chuyển từ gần 2 tháng xuống còn 4–5 ngày; triển khai chiến lược retry và xử lý giao dịch transactional để nâng cao khả năng chịu lỗi và tính nhất quán dữ liệu.",
@@ -481,13 +481,13 @@ export const portfolioDictionary: PortfolioDictionary = {
       },
       {
         id: "snp-digital-signature",
-        client: "SNP (Tổng công ty Tân Cảng Sài Gòn)",
+        client: "Tập Đoàn Cảng Biển & Logistics Hàng Đầu",
         company: "LIFETEX TECHNOLOGY JSC",
         period: "07/2025 – Hiện tại",
         role: "Backend Developer",
-        title: "Dịch Vụ Chữ Ký Số — SNP",
+        title: "Dịch Vụ Chữ Ký Số Doanh Nghiệp",
         highlight: "Ký Số Điện Tử USB Token & Luồng Chuyển Đổi Tài Liệu PDF",
-        problem: "Tổng công ty Tân Cảng Sài Gòn cần nâng cấp dịch vụ ký số nội bộ cho quy trình văn bản điện tử không giấy tờ, hỗ trợ ký số an toàn bằng thiết bị phần cứng USB Token, nhúng chứng thư số và tích hợp trực tiếp vào quy trình phê duyệt văn bản doanh nghiệp.",
+        problem: "Doanh nghiệp cảng biển và logistics quy mô lớn cần nâng cấp dịch vụ ký số nội bộ cho quy trình văn bản điện tử không giấy tờ, hỗ trợ ký số an toàn bằng thiết bị phần cứng USB Token, nhúng chứng thư số và tích hợp trực tiếp vào quy trình phê duyệt văn bản doanh nghiệp.",
         solution: "Tham gia nâng cấp dịch vụ ký số do nội bộ tự phát triển bằng Java và Spring Boot, tái cấu trúc mã nguồn cũ và điều chỉnh logic nghiệp vụ theo yêu cầu mới. Hỗ trợ xây dựng quy trình chuyển đổi tài liệu DOC sang PDF và ký số văn bản điện tử qua thiết bị USB Token. Nhúng hình ảnh chữ ký và thông tin chứng thư số vào tệp PDF đã ký, đồng thời tích hợp dịch vụ ký số nâng cấp vào quy trình quản lý văn bản doanh nghiệp.",
         techStack: ["Java", "Spring Boot", "USB Token", "Chữ Ký Số", "Xử Lý PDF", "Chứng Thư Số", "Tích Hợp Hệ Thống"],
         metrics: [
@@ -496,7 +496,7 @@ export const portfolioDictionary: PortfolioDictionary = {
           "Nhúng hình ảnh chữ ký và thông tin chứng thư số hợp lệ vào tệp PDF tài liệu",
           "Tích hợp ổn định dịch vụ ký số vào luồng quản lý và ban hành văn bản doanh nghiệp"
         ],
-        architectureSummary: "Văn Bản Gốc (DOC) ➔ Bộ Chuyển Đổi PDF ➔ Module Ký Số USB Token & Chứng Thư Số ➔ Tệp PDF Hoàn Tất Ký ➔ Hệ Thống Quản Lý Văn Bản SNP"
+        architectureSummary: "Văn Bản Gốc (DOC) ➔ Bộ Chuyển Đổi PDF ➔ Module Ký Số USB Token & Chứng Thư Số ➔ Tệp PDF Hoàn Tất Ký ➔ Hệ Thống Quản Lý Văn Bản Doanh Nghiệp"
       },
       {
         id: "mps-doc-system",
@@ -645,7 +645,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       labSectionTitle: "HỆ THỐNG VẬN HÀNH THỰC TẾ",
       labSectionSubtitle: "Mô phỏng trực quan giải pháp kỹ thuật: Đo lường thông lượng đa luồng Worker Threads và mô hình phân quyền Camunda BPMN doanh nghiệp.",
       tabBenchmark: "Benchmark 15x Worker Threads",
-      tabArchitecture: "Kiến Trúc BPMN Saigon Newport",
+      tabArchitecture: "Kiến Trúc BPMN Doanh Nghiệp",
       benchTitle: "Công Cụ Đồng Bộ Dữ Liệu Nội Bộ (10 TB Migration)",
       benchSubtitle: "Mô phỏng di chuyển 1M+ tài liệu: So sánh Single-Thread Legacy vs Phân vùng Worker Threads song song",
       benchDataset1k: "1,000 Tài liệu",
@@ -663,7 +663,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       benchProgressLabel: "Tiến độ Đồng bộ Batch",
       benchLegacyNote: "• Điểm nghẽn cũ: Nghẽn I/O SharePoint, xử lý đơn luồng tuần tự, tiến độ ban đầu ước tính mất gần 2 tháng.",
       benchTelemetryHeader: "TELEMETRY EVENT BUS HỆ THỐNG (LOGS TRỰC TIẾP)",
-      archHeaderTitle: "Hệ Thống Quản Lý Văn Bản Doanh Nghiệp — SNP (Tân Cảng Sài Gòn)",
+      archHeaderTitle: "Hệ Thống Quản Lý Văn Bản Doanh Nghiệp — Tập Đoàn Cảng Biển & Logistics",
       archHeaderDesc: "Nhấp vào bất kỳ node kiến trúc nào để xem chi tiết giải pháp kỹ thuật, phân quyền ABAC và đoạn mã nguồn thực tế.",
       archInspectorBadge: "INSPECTOR KIẾN TRÚC",
       archInspectorProblem: "Bài Toán Nghiệp Vụ",
@@ -707,7 +707,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       runwayCh1Title: "PIPELINE LEGACY 10 TB",
       runwayCh1MissionHeader: "MỤC TIÊU KIẾN TRÚC",
       runwayCh1MissionDesc: "Di chuyển 10 Terabytes dữ liệu lịch sử doanh nghiệp từ API SharePoint phân mảnh và các hệ CSDL SQL rời rạc vào kho dữ liệu SQL Server hợp nhất.",
-      runwayCh1Client: "KHÁCH HÀNG: TỔNG CÔNG TY TÂN CẢNG SÀI GÒN (SNP)",
+      runwayCh1Client: "KHÁCH HÀNG: TẬP ĐOÀN CẢNG BIỂN & LOGISTICS HÀNG ĐẦU",
       runwayCh1Result: "KẾT QUẢ: TỪ ~60 NGÀY XUỐNG CÒN 4.5 NGÀY ➔",
       runwayCh2Tag: "CHƯƠNG 02 // ĐA LUỒNG & TỐI ƯU HIỆU NĂNG CPU",
       runwayCh2Title: "15x WORKER THREADS",
@@ -721,7 +721,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       runwayCh3Title: "LÕI CAMUNDA BPMN",
       runwayCh3SecHeader: "PHÂN QUYỀN THEO QUY TRÌNH (WORKFLOW-DRIVEN)",
       runwayCh3SecDesc: "Điều phối quy trình doanh nghiệp linh hoạt phục vụ hơn 7.000 người dùng. Tích hợp ma trận kiểm soát truy cập kết hợp RBAC + ABAC mà không cần biên dịch lại hay triển khai lại backend.",
-      runwayCh3EngineTitle: "QUY TRÌNH ĐIỀU PHỐI 5 BƯỚC — SNP",
+      runwayCh3EngineTitle: "QUY TRÌNH ĐIỀU PHỐI 5 BƯỚC DOANH NGHIỆP",
       runwayCh3AuditBadge: "● TUÂN THỦ AUDIT: 100% ĐẠT CHUẨN",
       runwayCh3MemoryBadge: "BỘ NHỚ: TỐI ƯU HEAP, KHÔNG RÒ RỈ MEMORY",
       runwayCh3System: "HỆ THỐNG: QUẢN LÝ VĂN BẢN & LỊCH HỌP DOANH NGHIỆP",
@@ -764,7 +764,7 @@ export const architectureDictionary: ArchitectureDictionary = {
     'client-node': {
       title: 'Client Layer — 7,000+ Enterprise Users',
       badge: 'EDGE & CLIENTS',
-      problem: 'Enterprise management system serving 7,000+ users across Saigon Newport Corporation (SNP) covering document management, meeting workflows, duty scheduling, and internal reporting.',
+      problem: 'Enterprise management system serving 7,000+ users across a leading port & logistics corporation covering document management, meeting workflows, duty scheduling, and internal reporting.',
       solution: 'Connected via HTTPS with WebSocket notifications for timely processing status updates across web and mobile platforms.',
       impact: 'Sub-second real-time notifications (< 150ms), zero redundant polling traffic across 7,000+ personnel.',
       codeSnippet: `// WebSocket Subscription for Real-time Document Status
@@ -842,7 +842,7 @@ async getCachedDocumentMeta(docId: string): Promise<DocumentMeta> {
     'client-node': {
       title: 'Tầng Client — 7,000+ Người Dùng Doanh Nghiệp',
       badge: 'EDGE & CLIENTS',
-      problem: 'Hệ thống quản lý doanh nghiệp phục vụ hơn 7,000 người dùng trên toàn hệ thống Tổng công ty Tân Cảng Sài Gòn (SNP), bao quát văn bản, lịch trực, họp hành và báo cáo.',
+      problem: 'Hệ thống quản lý doanh nghiệp phục vụ hơn 7,000 người dùng trên toàn hệ thống Tập đoàn Cảng biển & Logistics hàng đầu, bao quát văn bản, lịch trực, họp hành và báo cáo.',
       solution: 'Kết nối qua HTTPS với WebSocket gửi và nhận thông báo cập nhật trạng thái văn bản kịp thời trên máy tính và điện thoại.',
       impact: 'Độ trễ thông báo thời gian thực < 150ms, loại bỏ hoàn toàn 90% lượng request polling dư thừa lên máy chủ.',
       codeSnippet: `// WebSocket Subscription for Real-time Document Status

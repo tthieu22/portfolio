@@ -5,7 +5,7 @@ import { getCurrentLanguage } from './i18n';
  * =========================================================================
  * ARCHITECTURE FLOW CONTROLLER (architecture-flow.ts)
  * =========================================================================
- * TypeScript implementation của sơ đồ kiến trúc Saigon Newport (hỗ trợ EN/VI)
+ * TypeScript implementation của sơ đồ kiến trúc Doanh Nghiệp (hỗ trợ EN/VI)
  * =========================================================================
  */
 

@@ -10,7 +10,7 @@
 3. **CI/CD Tự động hóa:** Tích hợp sẵn workflow [`.github/workflows/deploy.yml`](file:///d:/FullStack/portfolio/.github/workflows/deploy.yml) tự động kiểm tra type và deploy lên GitHub Pages khi push code.
 4. **2 Module tương tác kỹ thuật cao:**
    - **Worker Threads Simulator:** Mô phỏng tối ưu hoá 10 TB dữ liệu từ 6.0s xuống 0.4s (tốc độ gấp 15.2x).
-   - **Saigon Newport Architecture Flow:** Sơ đồ tương tác luồng Camunda BPMN (RBAC/ABAC), MinIO streaming và WebSocket.
+   - **Enterprise Architecture Flow:** Sơ đồ tương tác luồng Camunda BPMN (RBAC/ABAC), MinIO streaming và WebSocket.
 
 ---
 
