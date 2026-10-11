@@ -26,7 +26,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       availability: "One month after receiving an official offer",
       avatarUrl: "./assets/images/avatar.jpg",
       avatarCaption: "HANOI, VN / BACKEND DEVELOPER",
-      cvDownloadPath: "./assets/docs/Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf"
+      cvDownloadPath: "./assets/docs/Tran_Trong_Hieu_CV.pdf"
     },
 
     keyMetrics: [
@@ -104,6 +104,25 @@ export const portfolioDictionary: PortfolioDictionary = {
           "Processed 1M+ documents and tables with 4–5 million records each with transactional safety"
         ],
         architectureSummary: "SharePoint & SQL Sources ➔ Chunk Partition Router ➔ 4x Worker Threads Engine ➔ Transactional SQL Server Writer"
+      },
+      {
+        id: "snp-digital-signature",
+        client: "SNP (Saigon Newport Corporation)",
+        company: "LIFETEX TECHNOLOGY JSC",
+        period: "Jul 2025 – Present",
+        role: "Backend Developer",
+        title: "Digital Signature Service — SNP",
+        highlight: "USB Token Cryptographic Signing & PDF Transformation Pipeline",
+        problem: "Saigon Newport Corporation needed to modernize an internally developed digital signature service for paperless electronic document flows, supporting USB Token hardware signing and embedding valid digital certificates directly into enterprise document approval lifecycles.",
+        solution: "Upgraded the internal digital signature service using Java and Spring Boot, modernizing legacy architecture and adapting business logic to new requirements. Supported the automated DOC-to-PDF conversion workflow, USB Token-based electronic signing, and embedding signature images alongside digital certificate verification metadata into signed PDF documents. Seamlessly integrated the upgraded signing service into the enterprise document management workflow.",
+        techStack: ["Java", "Spring Boot", "USB Token", "Digital Signature", "PDF Processing", "Cryptography", "Enterprise Integration"],
+        metrics: [
+          "Modernized legacy codebase and adapted business logic to meet new digital enterprise requirements",
+          "Engineered DOC-to-PDF conversion workflow with hardware USB Token-based digital signing",
+          "Embedded visual signature stamps and cryptographic certificate validation into signed PDFs",
+          "Integrated upgraded digital signing service into Saigon Newport enterprise document workflow"
+        ],
+        architectureSummary: "DOC Intake ➔ Java DOC-to-PDF Converter ➔ USB Token Signing Module ➔ Certified PDF Output ➔ Enterprise Document System"
       },
       {
         id: "mps-doc-system",
@@ -211,11 +230,11 @@ export const portfolioDictionary: PortfolioDictionary = {
       },
       {
         category: "Architecture & Processing",
-        items: ["Microservices", "Modular Monolith", "API Gateway", "Event-driven Architecture", "Worker Threads", "Batch & Parallel Processing", "Tauri Desktop"]
+        items: ["Microservices", "Modular Monolith", "API Gateway", "Event-driven Architecture", "Worker Threads", "Batch & Parallel Processing", "PDF Processing (DOC-to-PDF)", "Tauri Desktop"]
       },
       {
         category: "Workflow & Security",
-        items: ["Camunda BPMN", "RBAC", "ABAC", "OAuth2", "JWT", "Audit Logging", "Optimistic Locking"]
+        items: ["Camunda BPMN", "Digital Signature (USB Token)", "RBAC", "ABAC", "OAuth2", "JWT", "Audit Logging", "Optimistic Locking"]
       },
       {
         category: "Real-time & AI Integration",
@@ -381,7 +400,7 @@ export const portfolioDictionary: PortfolioDictionary = {
       availability: "Sẵn sàng nhận việc 1 tháng sau khi nhận được offer chính thức",
       avatarUrl: "./assets/images/avatar.jpg",
       avatarCaption: "HÀ NỘI, VN / BACKEND DEVELOPER",
-      cvDownloadPath: "./assets/docs/Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf"
+      cvDownloadPath: "./assets/docs/Tran_Trong_Hieu_CV.pdf"
     },
 
     keyMetrics: [
@@ -459,6 +478,25 @@ export const portfolioDictionary: PortfolioDictionary = {
           "Xử lý thành công hơn 1 triệu tài liệu và 4–5 triệu bản ghi/bảng"
         ],
         architectureSummary: "Nguồn SharePoint & SQL ➔ Phân Vùng Dữ Liệu ➔ 4x Worker Threads ➔ SQL Server Writer"
+      },
+      {
+        id: "snp-digital-signature",
+        client: "SNP (Tổng công ty Tân Cảng Sài Gòn)",
+        company: "LIFETEX TECHNOLOGY JSC",
+        period: "07/2025 – Hiện tại",
+        role: "Backend Developer",
+        title: "Dịch Vụ Chữ Ký Số — SNP",
+        highlight: "Ký Số Điện Tử USB Token & Luồng Chuyển Đổi Tài Liệu PDF",
+        problem: "Tổng công ty Tân Cảng Sài Gòn cần nâng cấp dịch vụ ký số nội bộ cho quy trình văn bản điện tử không giấy tờ, hỗ trợ ký số an toàn bằng thiết bị phần cứng USB Token, nhúng chứng thư số và tích hợp trực tiếp vào quy trình phê duyệt văn bản doanh nghiệp.",
+        solution: "Tham gia nâng cấp dịch vụ ký số do nội bộ tự phát triển bằng Java và Spring Boot, tái cấu trúc mã nguồn cũ và điều chỉnh logic nghiệp vụ theo yêu cầu mới. Hỗ trợ xây dựng quy trình chuyển đổi tài liệu DOC sang PDF và ký số văn bản điện tử qua thiết bị USB Token. Nhúng hình ảnh chữ ký và thông tin chứng thư số vào tệp PDF đã ký, đồng thời tích hợp dịch vụ ký số nâng cấp vào quy trình quản lý văn bản doanh nghiệp.",
+        techStack: ["Java", "Spring Boot", "USB Token", "Chữ Ký Số", "Xử Lý PDF", "Chứng Thư Số", "Tích Hợp Hệ Thống"],
+        metrics: [
+          "Hiện đại hóa dịch vụ ký số nội bộ, chuẩn hóa mã nguồn cũ và đáp ứng yêu cầu nghiệp vụ mới",
+          "Hỗ trợ quy trình chuyển đổi DOC sang PDF và ký số điện tử dựa trên thiết bị phần cứng USB Token",
+          "Nhúng hình ảnh chữ ký và thông tin chứng thư số hợp lệ vào tệp PDF tài liệu",
+          "Tích hợp ổn định dịch vụ ký số vào luồng quản lý và ban hành văn bản doanh nghiệp"
+        ],
+        architectureSummary: "Văn Bản Gốc (DOC) ➔ Bộ Chuyển Đổi PDF ➔ Module Ký Số USB Token & Chứng Thư Số ➔ Tệp PDF Hoàn Tất Ký ➔ Hệ Thống Quản Lý Văn Bản SNP"
       },
       {
         id: "mps-doc-system",
@@ -566,11 +604,11 @@ export const portfolioDictionary: PortfolioDictionary = {
       },
       {
         category: "Kiến Trúc & Xử Lý",
-        items: ["Microservices", "Modular Monolith", "API Gateway", "Event-driven Architecture", "Worker Threads", "Batch & Song song", "Tauri Desktop"]
+        items: ["Microservices", "Modular Monolith", "API Gateway", "Event-driven Architecture", "Worker Threads", "Batch & Song song", "Xử lý chuyển đổi DOC sang PDF", "Tauri Desktop"]
       },
       {
         category: "Quy Trình & Bảo Mật",
-        items: ["Camunda BPMN", "RBAC", "ABAC", "OAuth2", "JWT", "Audit Logging", "Optimistic Locking"]
+        items: ["Camunda BPMN", "Chữ ký số (USB Token)", "RBAC", "ABAC", "OAuth2", "JWT", "Audit Logging", "Optimistic Locking"]
       },
       {
         category: "Thời Gian Thực & Tích Hợp AI",

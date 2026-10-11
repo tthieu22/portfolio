@@ -280,7 +280,7 @@ function renderPersonalInfo(data: PortfolioData): void {
   const cvBtn = document.getElementById('download-cv-btn') as HTMLAnchorElement | null;
   if (cvBtn) {
     cvBtn.href = personalInfo.cvDownloadPath;
-    cvBtn.download = 'Tran_Trong_Hieu_Backend_Developer_CV_EN.pdf';
+    cvBtn.download = 'Tran_Trong_Hieu_CV.pdf';
     cvBtn.target = '_blank';
     cvBtn.rel = 'noopener';
   }
